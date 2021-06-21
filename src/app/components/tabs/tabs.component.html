@@ -1,0 +1,47 @@
+<div class="container">
+    <mat-tab-group dynamicHeight mat-align-tabs="center">
+        <mat-tab label="BACK LOG">
+        <div class="example-large-box mat-elevation-z4">
+            BACK LOG
+        </div>
+        </mat-tab>
+        <mat-tab label="DO">
+        <div class="example-large-box mat-elevation-z4">
+            DO
+        </div>
+        </mat-tab>
+        <mat-tab label="DOING">
+            <div class="div-mat-card">
+                <mat-card class="card">
+                    <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Título da demanda</mat-card-title>
+                    <mat-card-subtitle>Prazo: 10/04/2021</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                    <p>
+                        Aqui você pode inserir um breve descrição do problema...
+                    </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                    <button mat-button>LIKE</button>
+                    <button mat-button>SHARE</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </mat-tab>
+       
+        <mat-tab label="DONE">
+            <div class="content" *ngFor="let item of listFinished">
+                <div class="example-large-box mat-elevation-z4">
+                    <p>Prazo para finalizar:  {{ item.dataParaFinalizar }}</p>
+                   
+                    {{ item.titulo }}
+                    {{ item.descricao }}
+              
+                </div>
+            </div>
+        </mat-tab>
+       
+    </mat-tab-group>
+</div>
